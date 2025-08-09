@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Profile</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Profile</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <h1 data-id="Profil Perusahaan" data-en="Company Profile">Profil Perusahaan</h1>
-    <nav>
-        <a href="index.html" data-id="Profil" data-en="Profile">Profil</a>
-        <a href="produk.html" data-id="Produk" data-en="Products">Produk</a>
-        <a href="pesan.html" data-id="Kirim Pesan" data-en="Send Message">Kirim Pesan</a>
-    </nav>
-    <div class="language-selector">
-        <select id="language">
-            <option value="id">Indonesia</option>
-            <option value="en">English</option>
-        </select>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://via.placeholder.com/40" alt="Logo Perusahaan">
+      <h1>PT Laut Biru Sejahtera</h1>
     </div>
-</header>
-<main>
-    <h2 data-id="Tentang Kami" data-en="About Us">Tentang Kami</h2>
-    <p data-id="Kami adalah perusahaan yang bergerak di bidang teknologi, berfokus pada inovasi dan kualitas."
-       data-en="We are a technology company focused on innovation and quality.">
-       Kami adalah perusahaan yang bergerak di bidang teknologi, berfokus pada inovasi dan kualitas.
-    </p>
-</main>
+    <nav>
+      <a href="index.html">Profil</a>
+      <a href="produk.html">Produk</a>
+      <a href="pesan.html">Hubungi Kami</a>
+      <select id="language-select" onchange="changeLanguage()">
+        <option value="id">🇮🇩 Indonesia</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
+    </nav>
+  </header>
 
-<a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
+  <main>
+    <h2>Selamat Datang di PT Laut Biru Sejahtera</h2>
+    <p>Kami adalah perusahaan yang bergerak di bidang ... (isi placeholder profil perusahaan).</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 PT Laut Biru Sejahtera</p>
+  </footer>
+
+  <a href="https://wa.me/6281234567890" id="wa-chat" target="_blank">💬</a>
+  <script src="script.js"></script>
 </body>
 </html>
