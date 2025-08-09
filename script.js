@@ -1,10 +1,13 @@
-document.getElementById("language-select").addEventListener("change", function() {
-  let lang = this.value;
-  if (lang === "id") {
-    alert("Bahasa diubah ke Indonesia");
-    // Di sini bisa ditambahkan logika terjemahan
-  } else if (lang === "en") {
-    alert("Language changed to English");
-    // Di sini bisa ditambahkan logika terjemahan
-  }
+// script.js - Dropdown bahasa & WhatsApp
+document.getElementById('language').addEventListener('change', function () {
+    const lang = this.value;
+    if (lang === 'en') {
+        document.querySelectorAll('[data-en]').forEach(el => {
+            el.textContent = el.getAttribute('data-en');
+        });
+    } else if (lang === 'id') {
+        document.querySelectorAll('[data-id]').forEach(el => {
+            el.textContent = el.getAttribute('data-id');
+        });
+    }
 });
