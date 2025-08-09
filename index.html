@@ -7,101 +7,104 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #1a1a1a;
-        color: #f5f5f5;
         margin: 0;
-        padding: 0;
+        background-color: #1c1c1c;
+        color: #f5f5f5;
     }
     header {
-        background-color: #222;
-        padding: 1em;
+        background-color: #111;
+        padding: 10px 20px;
         text-align: center;
     }
-    nav a {
-        color: #f5f5f5;
-        margin: 0 1em;
-        text-decoration: none;
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
     }
-    nav a:hover {
-        color: #00bfa6;
-    }
-    .container {
-        padding: 2em;
-        max-width: 900px;
-        margin: auto;
-    }
-    footer {
-        text-align: center;
-        padding: 1em;
-        background-color: #222;
-        color: #999;
-        margin-top: 2em;
-    }
-    select {
-        padding: 0.5em;
+    nav a, select {
+        padding: 10px 15px;
         background-color: #333;
-        color: #f5f5f5;
-        border: none;
-    }
-    button, .whatsapp-btn {
-        background-color: #00bfa6;
-        color: white;
-        padding: 0.7em 1.2em;
-        border: none;
-        cursor: pointer;
+        color: #fff;
         text-decoration: none;
-        border-radius: 4px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1rem;
     }
-    button:hover, .whatsapp-btn:hover {
-        background-color: #009e87;
+    nav a:hover, select:hover {
+        background-color: #555;
+    }
+    main {
+        padding: 20px;
+        text-align: center;
+    }
+    section {
+        margin-bottom: 40px;
+    }
+    button {
+        padding: 10px 15px;
+        background-color: #25D366;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+    @media (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            align-items: center;
+        }
+        nav a, select {
+            width: 80%;
+            text-align: center;
+        }
     }
 </style>
 </head>
 <body>
 <header>
-    <h1>Company Name</h1>
     <nav>
         <a href="#profile">Profile</a>
         <a href="#products">Produk</a>
         <a href="#contact">Kirim Pesan</a>
-        <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-btn">Chat via WhatsApp</a>
+        <a href="https://wa.me/6281234567890" target="_blank">Chat WhatsApp</a>
         <select id="languageSelect">
             <option value="id">Indonesia</option>
             <option value="en">English</option>
         </select>
     </nav>
 </header>
-<div class="container" id="profile">
-    <h2>Company Profile</h2>
-    <p>Selamat datang di perusahaan kami. Kami bergerak di bidang ...</p>
-</div>
-<div class="container" id="products">
-    <h2>Produk Kami</h2>
-    <p>Daftar produk perusahaan akan ditampilkan di sini...</p>
-</div>
-<div class="container" id="contact">
-    <h2>Kirim Pesan ke Email</h2>
-    <form action="https://formspree.io/f/yourformid" method="POST">
-        <input type="text" name="name" placeholder="Nama Anda" required><br><br>
-        <input type="email" name="email" placeholder="Email Anda" required><br><br>
-        <textarea name="message" placeholder="Pesan" required></textarea><br><br>
-        <button type="submit">Kirim</button>
-    </form>
-</div>
-<footer>
-    &copy; 2025 Company Name. All rights reserved.
-</footer>
+<main>
+    <section id="profile">
+        <h1>Company Profile</h1>
+        <p>Kami adalah perusahaan yang bergerak di bidang ...</p>
+    </section>
+    <section id="products">
+        <h2>Produk Kami</h2>
+        <p>Daftar produk...</p>
+    </section>
+    <section id="contact">
+        <h2>Kirim Pesan</h2>
+        <form action="https://formspree.io/f/yourformid" method="POST">
+            <input type="text" name="name" placeholder="Nama" required><br><br>
+            <input type="email" name="email" placeholder="Email" required><br><br>
+            <textarea name="message" placeholder="Pesan" required></textarea><br><br>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+</main>
 <script>
     document.getElementById('languageSelect').addEventListener('change', function() {
-        const lang = this.value;
-        if (lang === 'id') {
-            document.querySelector('#profile p').innerText = 'Selamat datang di perusahaan kami. Kami bergerak di bidang ...';
-            document.querySelector('#products p').innerText = 'Daftar produk perusahaan akan ditampilkan di sini...';
-            document.querySelector('#contact h2').innerText = 'Kirim Pesan ke Email';
+        if(this.value === 'en') {
+            document.querySelector('h1').textContent = 'Company Profile';
+            document.querySelector('#profile p').textContent = 'We are a company engaged in ...';
+            document.querySelector('#products h2').textContent = 'Our Products';
+            document.querySelector('#contact h2').textContent = 'Send a Message';
         } else {
-            document.querySelector('#profile p').innerText = 'Welcome to our company. We operate in the field of ...';
-            document.querySelector('#products p').innerText = 'The list of company products will be displayed here...';
-            document.querySelector('#contact h2').innerText = 'Send a Message to Email';
+            document.querySelector('h1').textContent = 'Company Profile';
+            document.querySelector('#profile p').textContent = 'Kami adalah perusahaan yang bergerak di bidang ...';
+            document.querySelector('#products h2').textContent = 'Produk Kami';
+            document.querySelector('#contact h2').textContent = 'Kirim Pesan';
         }
     });
 </script>
