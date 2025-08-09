@@ -1,13 +1,9 @@
-// script.js - Dropdown bahasa & WhatsApp
-document.getElementById('language').addEventListener('change', function () {
-    const lang = this.value;
-    if (lang === 'en') {
-        document.querySelectorAll('[data-en]').forEach(el => {
-            el.textContent = el.getAttribute('data-en');
-        });
-    } else if (lang === 'id') {
-        document.querySelectorAll('[data-id]').forEach(el => {
-            el.textContent = el.getAttribute('data-id');
-        });
-    }
-});
+function changeLanguage() {
+  const lang = document.getElementById("language-select").value;
+  if (lang === "en") {
+    alert("Switching to English version (placeholder)...");
+    // Nanti bisa dihubungkan dengan versi bahasa Inggris
+  } else {
+    alert("Kembali ke versi Bahasa Indonesia (placeholder)...");
+  }
+}
