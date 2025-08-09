@@ -1,16 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
+    <title>Beranda</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="header.js" defer></script>
+    <script src="translate.js" defer></script>
 </head>
-<body onload="loadHeader()">
-    <div id="header-placeholder"></div>
-    <div class="container"><h2>Selamat Datang di Perusahaan Kami</h2><p>Ini adalah halaman beranda.</p></div>
-    <a class="whatsapp-btn" href="https://wa.me/6281234567890" target="_blank">💬</a>
+<body>
+    <div id="header"></div>
+
+    <main style="padding: 20px;">
+        <h2 data-translate="home_text">Selamat datang di perusahaan kami!</h2>
+    </main>
+
+    <a href="https://wa.me/628123456789" class="whatsapp-button">💬</a>
 </body>
 </html>
