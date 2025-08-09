@@ -1,87 +1,78 @@
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #0b2c3c; /* biru laut gelap */
-  color: #ffffff;
+  background-color: #f4f9fc;
+  color: #222;
 }
 
-header {
-  background-color: #0e3e52;
-  padding: 15px 20px;
+.site-header {
+  background-color: #005f73;
+  color: white;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
   flex-wrap: wrap;
 }
 
-header .logo {
+.logo-container {
   display: flex;
   align-items: center;
 }
 
-header .logo img {
-  height: 40px;
-  margin-right: 10px;
+.logo {
+  max-height: 60px;
+  width: auto;
+  height: auto;
 }
 
-header .logo h1 {
-  font-size: 1.5em;
-  margin: 0;
-  color: #ffffff;
+.company-name {
+  margin-left: 10px;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-nav a, nav select {
-  color: #ffffff;
-  padding: 10px 15px;
+.main-nav a {
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  margin: 0 10px;
 }
 
-nav a:hover, nav select:hover {
-  background-color: #145b73;
+.language-dropdown select {
+  padding: 5px;
 }
 
 main {
   padding: 20px;
 }
 
-footer {
-  text-align: center;
-  padding: 15px;
-  background-color: #0e3e52;
-  color: #fff;
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
 }
 
-#wa-chat {
+form input, form textarea, form button {
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366;
+  background-color: #25D366;
   color: white;
   padding: 15px;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 24px;
   text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
-@media (max-width: 600px) {
-  header {
+@media (max-width: 768px) {
+  .site-header {
     flex-direction: column;
     align-items: flex-start;
   }
-  nav {
-    width: 100%;
-    justify-content: flex-start;
+  .main-nav {
+    margin-top: 10px;
   }
 }
