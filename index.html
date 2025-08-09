@@ -1,40 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Company Profile</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="logo">Nama Perusahaan</div>
+<header>
+    <h1 data-id="Profil Perusahaan" data-en="Company Profile">Profil Perusahaan</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="produk.html">Produk</a>
-      <a href="pesan.html">Kirim Pesan</a>
+        <a href="index.html" data-id="Profil" data-en="Profile">Profil</a>
+        <a href="produk.html" data-id="Produk" data-en="Products">Produk</a>
+        <a href="pesan.html" data-id="Kirim Pesan" data-en="Send Message">Kirim Pesan</a>
     </nav>
-    <select id="language-select" class="language-select">
-      <option value="id">Indonesia</option>
-      <option value="en">English</option>
-    </select>
-  </header>
-
-  <main>
-    <h1>Tentang Perusahaan</h1>
-    <p>
-      Selamat datang di perusahaan kami. Kami bergerak di bidang [bidang usaha],
-      menyediakan solusi terbaik untuk kebutuhan Anda dengan layanan profesional
-      dan produk berkualitas tinggi.
+    <div class="language-selector">
+        <select id="language">
+            <option value="id">Indonesia</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+</header>
+<main>
+    <h2 data-id="Tentang Kami" data-en="About Us">Tentang Kami</h2>
+    <p data-id="Kami adalah perusahaan yang bergerak di bidang teknologi, berfokus pada inovasi dan kualitas."
+       data-en="We are a technology company focused on innovation and quality.">
+       Kami adalah perusahaan yang bergerak di bidang teknologi, berfokus pada inovasi dan kualitas.
     </p>
-  </main>
+</main>
 
-  <footer>
-    &copy; 2025 Nama Perusahaan. All rights reserved.
-  </footer>
-
-  <a href="https://wa.me/628XXXXXXXXXX" class="whatsapp-btn" target="_blank">💬</a>
-
-  <script src="script.js"></script>
+<a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 </body>
 </html>
