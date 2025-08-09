@@ -17,7 +17,7 @@ header {
     flex-wrap: wrap;
 }
 
-header img {
+header img.logo {
     height: 60px;
     width: auto;
     object-fit: contain;
