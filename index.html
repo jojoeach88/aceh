@@ -1,72 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Profile</title>
-    <style>
-        body {font-family: Arial, sans-serif;margin: 0;padding: 0;}
-        header {background: #004080;color: white;padding: 15px;text-align: center;}
-        nav {background: #333;display: flex;justify-content: center;}
-        nav a {color: white;padding: 14px 20px;text-decoration: none;display: block;}
-        nav a:hover {background: #575757;}
-        section {padding: 20px;}
-        footer {background: #333;color: white;text-align: center;padding: 10px;position: fixed;bottom: 0;width: 100%;}
-        .dropdown {position: relative;display: inline-block;}
-        .dropdown-content {display: none;position: absolute;background-color: #f9f9f9;min-width: 160px;box-shadow: 0px 8px 16px rgba(0,0,0,0.2);}
-        .dropdown-content a {color: black;padding: 12px 16px;text-decoration: none;display: block;}
-        .dropdown-content a:hover {background-color: #f1f1f1;}
-        .dropdown:hover .dropdown-content {display: block;}
-        .wa-button {background: #25D366;color: white;padding: 10px 15px;border-radius: 5px;text-decoration: none;}
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company Profile</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1a1a1a;
+        color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #222;
+        padding: 1em;
+        text-align: center;
+    }
+    nav a {
+        color: #f5f5f5;
+        margin: 0 1em;
+        text-decoration: none;
+    }
+    nav a:hover {
+        color: #00bfa6;
+    }
+    .container {
+        padding: 2em;
+        max-width: 900px;
+        margin: auto;
+    }
+    footer {
+        text-align: center;
+        padding: 1em;
+        background-color: #222;
+        color: #999;
+        margin-top: 2em;
+    }
+    select {
+        padding: 0.5em;
+        background-color: #333;
+        color: #f5f5f5;
+        border: none;
+    }
+    button, .whatsapp-btn {
+        background-color: #00bfa6;
+        color: white;
+        padding: 0.7em 1.2em;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+    button:hover, .whatsapp-btn:hover {
+        background-color: #009e87;
+    }
+</style>
 </head>
 <body>
-    <header>
-        <h1>PT Contoh Perusahaan</h1>
-        <p>Solusi Terbaik untuk Kebutuhan Anda</p>
-    </header>
+<header>
+    <h1>Company Name</h1>
     <nav>
-        <a href="#profile">Profil Perusahaan</a>
-        <a href="#produk">Produk</a>
-        <a href="#contact">Hubungi Kami</a>
-        <div class="dropdown">
-            <a href="#">Bahasa ▼</a>
-            <div class="dropdown-content">
-                <a href="#" onclick="translatePage('id')">Indonesia</a>
-                <a href="#" onclick="translatePage('en')">English</a>
-            </div>
-        </div>
+        <a href="#profile">Profile</a>
+        <a href="#products">Produk</a>
+        <a href="#contact">Kirim Pesan</a>
+        <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-btn">Chat via WhatsApp</a>
+        <select id="languageSelect">
+            <option value="id">Indonesia</option>
+            <option value="en">English</option>
+        </select>
     </nav>
-    <section id="profile">
-        <h2>Profil Perusahaan</h2>
-        <p>PT Contoh Perusahaan adalah penyedia layanan profesional di bidang teknologi dan inovasi dengan komitmen memberikan solusi terbaik untuk klien kami di seluruh dunia.</p>
-    </section>
-    <section id="produk">
-        <h2>Produk Kami</h2>
-        <ul>
-            <li>Produk A - Deskripsi singkat</li>
-            <li>Produk B - Deskripsi singkat</li>
-            <li>Produk C - Deskripsi singkat</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Hubungi Kami</h2>
-        <p>Kirim pesan ke email kami: <a href="mailto:info@contohperusahaan.com">info@contohperusahaan.com</a></p>
-        <p>Chat langsung via WhatsApp: <a class="wa-button" href="https://wa.me/6281234567890" target="_blank">Chat WhatsApp</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2025 PT Contoh Perusahaan</p>
-    </footer>
-    <script>
-        function translatePage(lang) {
-            if(lang === 'id') {
-                document.documentElement.lang = 'id';
-                alert('Bahasa diubah ke Indonesia');
-            } else {
-                document.documentElement.lang = 'en';
-                alert('Language changed to English');
-            }
+</header>
+<div class="container" id="profile">
+    <h2>Company Profile</h2>
+    <p>Selamat datang di perusahaan kami. Kami bergerak di bidang ...</p>
+</div>
+<div class="container" id="products">
+    <h2>Produk Kami</h2>
+    <p>Daftar produk perusahaan akan ditampilkan di sini...</p>
+</div>
+<div class="container" id="contact">
+    <h2>Kirim Pesan ke Email</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Nama Anda" required><br><br>
+        <input type="email" name="email" placeholder="Email Anda" required><br><br>
+        <textarea name="message" placeholder="Pesan" required></textarea><br><br>
+        <button type="submit">Kirim</button>
+    </form>
+</div>
+<footer>
+    &copy; 2025 Company Name. All rights reserved.
+</footer>
+<script>
+    document.getElementById('languageSelect').addEventListener('change', function() {
+        const lang = this.value;
+        if (lang === 'id') {
+            document.querySelector('#profile p').innerText = 'Selamat datang di perusahaan kami. Kami bergerak di bidang ...';
+            document.querySelector('#products p').innerText = 'Daftar produk perusahaan akan ditampilkan di sini...';
+            document.querySelector('#contact h2').innerText = 'Kirim Pesan ke Email';
+        } else {
+            document.querySelector('#profile p').innerText = 'Welcome to our company. We operate in the field of ...';
+            document.querySelector('#products p').innerText = 'The list of company products will be displayed here...';
+            document.querySelector('#contact h2').innerText = 'Send a Message to Email';
         }
-    </script>
+    });
+</script>
 </body>
 </html>
