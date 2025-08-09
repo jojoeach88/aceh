@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tinggalkan Pesan</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <div id="header"></div>
+    <div id="header-container"></div>
+    <main>
+        <h2>Hubungi Kami</h2>
+        <form action="mailto:email@perusahaan.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Nama" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <textarea name="message" placeholder="Pesan Anda" required></textarea><br>
+            <button type="submit">Kirim</button>
+        </form>
+    </main>
 
-  <main>
-    <section>
-      <h2>Kirim Pesan</h2>
-      <form action="mailto:emailperusahaan@example.com" method="post" enctype="text/plain">
-        <input type="text" name="nama" placeholder="Nama Anda" required>
-        <input type="email" name="email" placeholder="Email Anda" required>
-        <textarea name="pesan" placeholder="Tulis pesan Anda" required></textarea>
-        <button type="submit">Kirim</button>
-      </form>
-    </section>
-  </main>
-
-  <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">💬</a>
-
-  <script src="script.js"></script>
+    <a href="https://wa.me/6281234567890" class="whatsapp-btn" target="_blank">💬</a>
 </body>
 </html>
