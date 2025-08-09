@@ -16,27 +16,16 @@
     nav{display:flex;gap:10px;align-items:center}
     .btn{padding:8px 14px;border-radius:8px;border:1px solid rgba(15,23,42,.06);background:#fff;cursor:pointer}
     .btn.primary{background:var(--accent);color:#fff;border:none}
-    .lang-switch{display:flex;gap:6px}
-
+    select.lang-dropdown{padding:8px 14px;border-radius:8px;border:1px solid rgba(15,23,42,.06);background:#fff;cursor:pointer}
     .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px 0}
     .hero h1{font-size:28px;margin:0 0 12px}
     .hero p{color:var(--muted);margin:0 0 18px}
     .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
     .card{background:#fff;border-radius:12px;padding:16px;box-shadow:0 6px 18px rgba(12,18,35,.06)}
-
     .cta{margin-top:18px}
     footer{margin-top:40px;padding:22px 0;border-top:1px solid #eef2f7;color:var(--muted)}
-
-    /* Responsive */
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr;}
-      .features{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width:560px){
-      .features{grid-template-columns:1fr}
-    }
-
-    /* small helper classes */
+    @media (max-width:900px){.hero{grid-template-columns:1fr;}.features{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:560px){.features{grid-template-columns:1fr}}
     .muted{color:var(--muted)}
     .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#eefafa;border:1px solid rgba(14,165,164,.12);font-size:13px}
   </style>
@@ -51,12 +40,11 @@
           <div class="muted" style="font-size:13px" id="companyTag">Trusted partner for your business</div>
         </div>
       </div>
-
       <nav>
-        <div class="lang-switch" aria-label="Language switch">
-          <button class="btn" id="btn-en">English</button>
-          <button class="btn" id="btn-id">Bahasa</button>
-        </div>
+        <select id="lang-select" class="lang-dropdown" aria-label="Language switch">
+          <option value="en">English</option>
+          <option value="id">Bahasa</option>
+        </select>
         <button class="btn primary" id="btn-contact">Contact</button>
       </nav>
     </header>
@@ -67,12 +55,10 @@
           <span class="pill" id="pill-hero">Innovative Solutions</span>
           <h1 id="heroTitle">We help businesses grow with modern technology</h1>
           <p id="heroSubtitle">Smart software, reliable strategy, and world-class support — tailored for your needs.</p>
-
           <div class="cta">
             <button class="btn primary" id="ctaPrimary">Get Started</button>
             <button class="btn" id="ctaSecondary">Learn More</button>
           </div>
-
           <div class="features" style="margin-top:28px">
             <div class="card">
               <h3 id="f1Title">Custom Software</h3>
@@ -88,11 +74,9 @@
             </div>
           </div>
         </div>
-
         <div style="background:linear-gradient(180deg,#fff,#f8fafc);border-radius:12px;padding:20px;box-shadow:0 8px 28px rgba(12,18,35,.06);">
           <h3 id="quoteTitle">Get a free consultation</h3>
           <p id="quoteText" class="muted">Schedule a 30-minute call — no obligations.</p>
-
           <form id="contactForm" onsubmit="event.preventDefault();alert(currentStrings.formAlert)" style="margin-top:12px;display:flex;flex-direction:column;gap:8px">
             <input id="nameInput" required placeholder="Your name" style="padding:10px;border-radius:8px;border:1px solid #e6eef0">
             <input id="emailInput" type="email" required placeholder="Email" style="padding:10px;border-radius:8px;border:1px solid #e6eef0">
@@ -101,7 +85,6 @@
           </form>
         </div>
       </section>
-
       <section style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;align-items:center">
         <div style="flex:1;min-width:220px">
           <h4 id="aboutTitle">About Us</h4>
@@ -123,105 +106,6 @@
   </div>
 
   <script>
-    // translation strings
-    const strings = {
-      en: {
-        companyName: 'Company',
-        companyTag: 'Trusted partner for your business',
-        pillHero: 'Innovative Solutions',
-        heroTitle: 'We help businesses grow with modern technology',
-        heroSubtitle: 'Smart software, reliable strategy, and world-class support — tailored for your needs.',
-        ctaPrimary: 'Get Started',
-        ctaSecondary: 'Learn More',
-        f1Title: 'Custom Software',
-        f1Desc: 'Bespoke web & mobile applications to match your workflow.',
-        f2Title: 'Cloud & DevOps',
-        f2Desc: 'Scalable cloud setup with automated deployments.',
-        f3Title: 'Design & UX',
-        f3Desc: 'User-centered design that converts visitors into customers.',
-        quoteTitle: 'Get a free consultation',
-        quoteText: 'Schedule a 30-minute call — no obligations.',
-        formAlert: 'Thank you! We received your request. We will contact you shortly.',
-        aboutTitle: 'About Us',
-        aboutText: 'We are a team of engineers, designers, and strategists helping companies ship digital products faster.',
-        contactTitle: 'Contact',
-        contactText: 'hello@company.com • +62 812 3456 7890',
-        footerCompany: 'Company'
-      },
-      id: {
-        companyName: 'Perusahaan',
-        companyTag: 'Mitra terpercaya untuk bisnis Anda',
-        pillHero: 'Solusi Inovatif',
-        heroTitle: 'Kami membantu bisnis berkembang dengan teknologi modern',
-        heroSubtitle: 'Perangkat lunak cerdas, strategi andal, dan dukungan kelas dunia — disesuaikan untuk kebutuhan Anda.',
-        ctaPrimary: 'Mulai Sekarang',
-        ctaSecondary: 'Pelajari Lebih Lanjut',
-        f1Title: 'Perangkat Lunak Kustom',
-        f1Desc: 'Aplikasi web & mobile sesuai alur kerja Anda.',
-        f2Title: 'Cloud & DevOps',
-        f2Desc: 'Pengaturan cloud yang dapat diskalakan dengan otomatisasi deployment.',
-        f3Title: 'Desain & UX',
-        f3Desc: 'Desain berpusat pada pengguna yang mengubah pengunjung menjadi pelanggan.',
-        quoteTitle: 'Dapatkan konsultasi gratis',
-        quoteText: 'Jadwalkan panggilan 30 menit — tanpa kewajiban.',
-        formAlert: 'Terima kasih! Permintaan Anda sudah kami terima. Kami akan menghubungi Anda segera.',
-        aboutTitle: 'Tentang Kami',
-        aboutText: 'Kami adalah tim engineer, desainer, dan strategist yang membantu perusahaan merilis produk digital lebih cepat.',
-        contactTitle: 'Kontak',
-        contactText: 'hello@company.com • +62 812 3456 7890',
-        footerCompany: 'Perusahaan'
-      }
-    };
-
-    // helper to set language
-    let currentLang = 'en';
-    let currentStrings = strings[currentLang];
-
-    function setLanguage(lang){
-      currentLang = lang;
-      currentStrings = strings[lang];
-      document.documentElement.lang = (lang === 'id') ? 'id' : 'en';
-
-      // update texts
-      document.getElementById('companyName').textContent = currentStrings.companyName;
-      document.getElementById('companyTag').textContent = currentStrings.companyTag;
-      document.getElementById('pill-hero').textContent = currentStrings.pillHero;
-      document.getElementById('heroTitle').textContent = currentStrings.heroTitle;
-      document.getElementById('heroSubtitle').textContent = currentStrings.heroSubtitle;
-      document.getElementById('ctaPrimary').textContent = currentStrings.ctaPrimary;
-      document.getElementById('ctaSecondary').textContent = currentStrings.ctaSecondary;
-      document.getElementById('f1Title').textContent = currentStrings.f1Title;
-      document.getElementById('f1Desc').textContent = currentStrings.f1Desc;
-      document.getElementById('f2Title').textContent = currentStrings.f2Title;
-      document.getElementById('f2Desc').textContent = currentStrings.f2Desc;
-      document.getElementById('f3Title').textContent = currentStrings.f3Title;
-      document.getElementById('f3Desc').textContent = currentStrings.f3Desc;
-      document.getElementById('quoteTitle').textContent = currentStrings.quoteTitle;
-      document.getElementById('quoteText').textContent = currentStrings.quoteText;
-      document.getElementById('formSubmit').textContent = currentStrings.formAlert.includes('Thank') ? currentStrings.formAlert : (lang === 'id' ? 'Kirim Permintaan' : 'Send Request');
-      // About/contact
-      document.getElementById('aboutTitle').textContent = currentStrings.aboutTitle;
-      document.getElementById('aboutText').textContent = currentStrings.aboutText;
-      document.getElementById('contactTitle').textContent = currentStrings.contactTitle;
-      document.getElementById('contactText').textContent = currentStrings.contactText;
-      document.getElementById('footerCompany').textContent = currentStrings.footerCompany;
-      // CTA form alert stored globally
-      // small accessibility focus
-      document.getElementById('btn-en').setAttribute('aria-pressed', lang==='en');
-      document.getElementById('btn-id').setAttribute('aria-pressed', lang==='id');
-    }
-
-    // wire buttons
-    document.getElementById('btn-en').addEventListener('click',()=>setLanguage('en'));
-    document.getElementById('btn-id').addEventListener('click',()=>setLanguage('id'));
-
-    // Contact button scroll to form
-    document.getElementById('btn-contact').addEventListener('click',()=>{
-      document.getElementById('nameInput').focus();
-    });
-
-    // Initialize
-    setLanguage('en');
-  </script>
-</body>
-</html>
+    const strings={en:{companyName:'Company',companyTag:'Trusted partner for your business',pillHero:'Innovative Solutions',heroTitle:'We help businesses grow with modern technology',heroSubtitle:'Smart software, reliable strategy, and world-class support — tailored for your needs.',ctaPrimary:'Get Started',ctaSecondary:'Learn More',f1Title:'Custom Software',f1Desc:'Bespoke web & mobile applications to match your workflow.',f2Title:'Cloud & DevOps',f2Desc:'Scalable cloud setup with automated deployments.',f3Title:'Design & UX',f3Desc:'User-centered design that converts visitors into customers.',quoteTitle:'Get a free consultation',quoteText:'Schedule a 30-minute call — no obligations.',formAlert:'Thank you! We received your request. We will contact you shortly.',aboutTitle:'About Us',aboutText:'We are a team of engineers, designers, and strategists helping companies ship digital products faster.',contactTitle:'Contact',contactText:'hello@company.com • +62 812 3456 7890',footerCompany:'Company'},id:{companyName:'Perusahaan',companyTag:'Mitra terpercaya untuk bisnis Anda',pillHero:'Solusi Inovatif',heroTitle:'Kami membantu bisnis berkembang dengan teknologi modern',heroSubtitle:'Perangkat lunak cerdas, strategi andal, dan dukungan kelas dunia — disesuaikan untuk kebutuhan Anda.',ctaPrimary:'Mulai Sekarang',ctaSecondary:'Pelajari Lebih Lanjut',f1Title:'Perangkat Lunak Kustom',f1Desc:'Aplikasi web & mobile sesuai alur kerja Anda.',f2Title:'Cloud & DevOps',f2Desc:'Pengaturan cloud yang dapat diskalakan dengan otomatisasi deployment.',f3Title:'Desain & UX',f3Desc:'Desain berpusat pada pengguna yang mengubah pengunjung menjadi pelanggan.',quoteTitle:'Dapatkan konsultasi gratis',quoteText:'Jadwalkan panggilan 30 menit — tanpa kewajiban.',formAlert:'Terima kasih! Permintaan Anda sudah kami terima. Kami akan menghubungi Anda segera.',aboutTitle:'Tentang Kami',aboutText:'Kami adalah tim engineer, desainer, dan strategist yang membantu perusahaan merilis produk digital lebih cepat.',contactTitle:'Kontak',contactText:'hello@company.com • +62 812 3456 7890',footerCompany:'Perusahaan'}};
+    let currentLang='en';let currentStrings=strings[currentLang];
+    function setLangu
