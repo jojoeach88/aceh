@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+    <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="My Export Co. Logo" class="logo-img">
+    </a>
+    <div class="logo">My Export Co.</div>
+    <div class="header-right">
+        <div class="lang-switch" onclick="switchLanguage()">EN / ID</div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </div>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html" data-key="home">Home</a></li>
+            <li><a href="products.html" data-key="products">Products</a></li>
+            <li><a href="contact.html" data-key="contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <h2 data-key="contactPageTitle">Contact Us</h2>
+        <div class="contact-container">
+            <form action="https://formspree.io/f/YOUR_FORM_ID_HERE" method="POST" class="contact-form">
+                <label for="name" data-key="contactFormName">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email" data-key="contactFormEmail">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject" data-key="contactFormSubject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+
+                <label for="message" data-key="contactFormMessage">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit" data-key="contactFormBtn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <h3 data-key="contactOfficeTitle">Our Office</h3>
+                <p data-key="contactOfficeAddress">Jl. Contoh No. 123, Jakarta, Indonesia</p>
+                <p>Email: <a href="mailto:info@myexportco.com">info@myexportco.com</a></p>
+                <p>Phone: +62 812 3456 7890</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/your-company" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/your-company" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/your-company" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p data-key="footerText">&copy; 2025 My Export Co. All Rights Reserved.</p>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
