@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Products</title>
+    <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo-link">
+        <img src="images/logo.png" alt="My Export Co. Logo" class="logo-img">
+    </a>
+    <div class="logo">My Export Co.</div>
+    <div class="header-right">
+        <div class="lang-switch" onclick="switchLanguage()">EN / ID</div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776;
+        </div>
+    </div>
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="index.html" data-key="home">Home</a></li>
+            <li><a href="products.html" data-key="products">Products</a></li>
+            <li><a href="contact.html" data-key="contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main id="products-page">
+        <h2 data-key="productsTitle">Our Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/coconut.jpg" alt="Coconut">
+                <h3 data-key="coconutTitle">Coconut</h3>
+                <p data-key="coconutDesc">Sourced from the fertile volcanic soils of Indonesia, our coconuts are celebrated for their rich, nutty flavor and versatility. They are a staple for both culinary and cosmetic applications worldwide.</p>
+                <h4 class="product-price" data-key="coconutPrice"></h4>
+                <a href="https://wa.me/6281234567890?text=Hello,%20I%20am%20interested%20in%20your%20Coconut." target="_blank" class="whatsapp-btn" data-key="orderBtn">Order via WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="images/candlenut.jpg" alt="Candlenut">
+                <h3 data-key="candlenutTitle">Candlenut</h3>
+                <p data-key="candlenutDesc">Known as the secret ingredient in many Southeast Asian dishes, our premium candlenuts add a creamy, nutty texture and richness. They are a must-have for authentic, flavorful cuisine.</p>
+                <h4 class="product-price" data-key="candlenutPrice"></h4>
+                <a href="https://wa.me/6281234567890?text=Hello,%20I%20am%20interested%20in%20your%20Candlenut." target="_blank" class="whatsapp-btn" data-key="orderBtn">Order via WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="images/palm_sugar.jpg" alt="Palm Sugar">
+                <h3 data-key="palmSugarTitle">Palm Sugar</h3>
+                <p data-key="palmSugarDesc">Harvested traditionally from the sap of palm trees, our palm sugar offers a deep caramel flavor with a subtle smokiness. It's an unrefined, natural sweetener perfect for confectionery, beverages, and cooking.</p>
+                <h4 class="product-price" data-key="palmSugarPrice"></h4>
+                <a href="https://wa.me/6281234567890?text=Hello,%20I%20am%20interested%20in%20your%20Palm%20Sugar." target="_blank" class="whatsapp-btn" data-key="orderBtn">Order via WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="images/bay_leaf.jpg" alt="Bay Leaf">
+                <h3 data-key="bayLeafTitle">Bay Leaf</h3>
+                <p data-key="bayLeafDesc">Our bay leaves are hand-picked for their robust, herbal aroma and flavor. They are an essential spice in soups, stews, and sauces, lending a subtle yet distinctive touch to your culinary creations.</p>
+                <h4 class="product-price" data-key="bayLeafPrice"></h4>
+                <a href="https://wa.me/6281234567890?text=Hello,%20I%20am%20interested%20in%20your%20Bay%20Leaf." target="_blank" class="whatsapp-btn" data-key="orderBtn">Order via WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="images/coffee.jpg" alt="Coffee">
+                <h3 data-key="coffeeTitle">Coffee</h3>
+                <p data-key="coffeeDesc">Experience the unique taste of Indonesian coffee, celebrated for its full body, complex aromas, and rich flavor profiles. From the fruity notes of Sumatra to the earthy tones of Java, our coffee offers an unforgettable experience for connoisseurs.</p>
+                <h4 class="product-price" data-key="coffeePrice"></h4>
+                <a href="https://wa.me/6281234567890?text=Hello,%20I%20am%20interested%20in%20your%20Coffee." target="_blank" class="whatsapp-btn" data-key="orderBtn">Order via WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="images/patchouli_oil.jpg" alt="Patchouli Oil">
+                <h3 data-key="patchouliOilTitle">Patchouli Oil</h3>
+                <p data-key="patchouliOilDesc">Pure and potent, our patchouli oil is highly sought after for its distinctive musky, earthy fragrance. It's a key ingredient in perfumes, cosmetics, and aromatherapy, known for its calming and grounding properties.</p>
+                <h4 class="product-price" data-key="patchouliOilPrice"></h4>
+                <a href="https://wa.me/6281234567890?text=Hello,%20I%20am%20interested%20in%20your%20Patchouli%20Oil." target="_blank" class="whatsapp-btn" data-key="orderBtn">Order via WhatsApp</a>
+            </div>
+            <div class="product-card">
+                <img src="images/cinnamon.jpg" alt="Cinnamon">
+                <h3 data-key="cinnamonTitle">Cinnamon</h3>
+                <p data-key="cinnamonDesc">Our premium cinnamon is sourced from the finest barks, offering a warm, sweet, and fragrant aroma. Perfect for baking, beverages, and savory dishes, it adds a touch of spice and sophistication.</p>
+                <h4 class="product-price" data-key="cinnamonPrice"></h4>
+                <a href="https://wa.me/6281234567890?text=Hello,%20I%20am%20interested%20in%20your%20Cinnamon." target="_blank" class="whatsapp-btn" data-key="orderBtn">Order via WhatsApp</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/your-company" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/your-company" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/your-company" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p data-key="footerText">&copy; 2025 My Export Co. All Rights Reserved.</p>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
