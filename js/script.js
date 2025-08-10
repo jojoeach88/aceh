@@ -6,7 +6,7 @@ const translations = {
         heroTitle: "Indonesian Excellence, Globally Delivered.",
         heroSubtitle: "Your Gateway to Indonesia's Finest Commodities",
         aboutTitle: "About Us",
-        aboutText: "My Export Co. specializes in connecting the rich agricultural bounty of Indonesia with markets around the globe. Our commitment to sustainable practices and meticulous quality control ensures that every product we export represents the best of Indonesian heritage and craftsmanship. We are dedicated to building lasting partnerships and delivering exceptional value to our customers.",
+        aboutText: "Lentera Export specializes in connecting the rich agricultural bounty of Indonesia with markets around the globe. Our commitment to sustainable practices and meticulous quality control ensures that every product we export represents the best of Indonesian heritage and craftsmanship. We are dedicated to building lasting partnerships and delivering exceptional value to our customers.",
         productsTitle: "Our Products",
         coconutTitle: "Coconut",
         coconutDesc: "Sourced from the fertile volcanic soils of Indonesia, our coconuts are celebrated for their rich, nutty flavor and versatility. They are a staple for both culinary and cosmetic applications worldwide.",
@@ -38,7 +38,7 @@ const translations = {
         contactFormBtn: "Send Message",
         contactOfficeTitle: "Our Office",
         contactOfficeAddress: "Jl. Contoh No. 123, Jakarta, Indonesia",
-        footerText: "© 2025 My Export Co. All Rights Reserved."
+        footerText: "© 2025 Lentera Export Co. All Rights Reserved."
     },
     id: {
         home: "Beranda",
@@ -47,7 +47,7 @@ const translations = {
         heroTitle: "Keunggulan Indonesia, Dikirim ke Seluruh Dunia.",
         heroSubtitle: "Gerbang Anda Menuju Komoditas Terbaik Indonesia",
         aboutTitle: "Tentang Kami",
-        aboutText: "My Export Co. mengkhususkan diri dalam menghubungkan kekayaan hasil pertanian Indonesia dengan pasar di seluruh dunia. Komitmen kami pada praktik berkelanjutan dan kontrol kualitas yang teliti memastikan setiap produk yang kami ekspor mewakili warisan dan keahlian terbaik Indonesia. Kami berdedikasi untuk membangun kemitraan yang langgeng dan memberikan nilai luar biasa kepada pelanggan kami.",
+        aboutText: "Lentera Export mengkhususkan diri dalam menghubungkan kekayaan hasil pertanian Indonesia dengan pasar di seluruh dunia. Komitmen kami pada praktik berkelanjutan dan kontrol kualitas yang teliti memastikan setiap produk yang kami ekspor mewakili warisan dan keahlian terbaik Indonesia. Kami berdedikasi untuk membangun kemitraan yang langgeng dan memberikan nilai luar biasa kepada pelanggan kami.",
         productsTitle: "Produk Kami",
         coconutTitle: "Kelapa",
         coconutDesc: "Diambil dari tanah vulkanik Indonesia yang subur, kelapa kami terkenal karena rasanya yang kaya, gurih, dan serbaguna. Kelapa kami menjadi bahan pokok untuk aplikasi kuliner maupun kosmetik di seluruh dunia.",
@@ -79,7 +79,7 @@ const translations = {
         contactFormBtn: "Kirim Pesan",
         contactOfficeTitle: "Kantor Kami",
         contactOfficeAddress: "Jl. Contoh No. 123, Jakarta, Indonesia",
-        footerText: "© 2025 My Export Co. Semua Hak Dilindungi."
+        footerText: "© 2025 Lentera Export Semua Hak Dilindungi."
     }
 };
 
